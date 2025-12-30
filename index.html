@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hai Nguyen Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="loading-lock">
+        <i class="fas fa-lock"></i>
+      </div>
+      <div class="loading-text">INITIALIZING SECURITY SYSTEMS...</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Matrix Background -->
+  <div class="matrix-bg"></div>
+  <div class="scan-lines"></div>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-lock">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <span class="logo-text">HAI.NGUYEN</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">HOME</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#skills" class="nav-link">SKILLS</a></li>
+        <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+        <li><a href="#certs" class="nav-link">CERTS</a></li>
+        <li><a href="#journey" class="nav-link">JOURNEY</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="badge ethical">ETHICAL</span>
+        <span class="badge blue-team">BLUE TEAM</span>
+        <span class="badge red-team">RED TEAM</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-main">INFORMATION ASSURANCE</span>
+        <span class="title-sub">INFORMATION ASSURANCE</span>
+      </h1>
+      
+      <p class="hero-subtitle">Cybersecurity enthusiast & AWS Cloud Intern. Passionate about penetration testing and securing digital infrastructure.</p>
+      
+      <div class="hero-tags">
+        <span class="tag pentest">Penetration Testing</span>
+        <span class="tag cloud-security">Cloud Security</span>
+        <span class="tag aws">AWS</span>
+        <span class="tag blue-team">Blue Team</span>
+        <span class="separator">|</span>
+        <span class="tag info">FPT University</span>
+        <span class="tag student">AWS Intern</span>
+      </div>
+      
+      <!-- Terminal Window -->
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-controls">
+            <span class="control red"></span>
+            <span class="control yellow"></span>
+            <span class="control green"></span>
+          </div>
+          <span class="terminal-title">/usr/bin/secure-shell</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-content" id="terminalContent">
+            <div class="command-line">
+              <span class="prompt">hainguyen@security:~$</span>
+              <span class="typing-text"></span>
+              <span class="cursor">|</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 3D Rotating Lock -->
+    <div class="hero-visual">
+      <div class="animated-lock">
+        <div class="lock-3d-container">
+          <div class="lock-3d" id="lock3d">
+            <!-- Front Face -->
+            <div class="lock-face front">
+              <div class="lock-body">
+                <div class="keyhole">
+                  <div class="keyhole-circle"></div>
+                  <div class="keyhole-slot"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Back Face -->
+            <div class="lock-face back">
+              <div class="lock-body">
+                <div class="mechanism">
+                  <div class="gear gear-1"></div>
+                  <div class="gear gear-2"></div>
+                  <div class="gear gear-3"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Top Face -->
+            <div class="lock-face top">
+              <div class="shackle-mount"></div>
+            </div>
+            
+            <!-- Bottom Face -->
+            <div class="lock-face bottom">
+              <div class="lock-brand">SECURE</div>
+            </div>
+            
+            <!-- Left Face -->
+            <div class="lock-face left">
+              <div class="side-detail"></div>
+            </div>
+            
+            <!-- Right Face -->
+            <div class="lock-face right">
+              <div class="side-detail"></div>
+            </div>
+          </div>
+          
+          <!-- 3D Shackle -->
+          <div class="shackle-3d">
+            <div class="shackle-left-3d"></div>
+            <div class="shackle-right-3d"></div>
+            <div class="shackle-top-3d"></div>
+          </div>
+          
+          <!-- Interactive Elements -->
+          <div class="orbit-elements">
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cyber-grid"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="glitch" data-text="About Me">About Me</span>
+      </h2>
+      <div class="about-content">
+        <div class="about-description">
+          <p>Cyber Security student focused on Information Assurance and defense. I value mindset, discipline, curiosity, and ethics. I enjoy breaking things to understand them and building resilient systems that can withstand real-world threats.</p>
+        </div>
+        
+        <div class="about-terminal">
+          <div class="code-block">
+            <div class="code-line">
+              <span class="prompt">></span>
+              <span class="command">whoami</span>
+            </div>
+            <div class="code-line">
+              <span class="prompt">></span>
+              <span class="property">role:</span>
+              <span class="value">student | focus: blue team, penetration testing, assurance</span>
+            </div>
+            <div class="code-line">
+              <span class="prompt">></span>
+              <span class="property">interests:</span>
+              <span class="value">malware analysis, cloud security, threat hunting</span>
+            </div>
+            <div class="code-line">
+              <span class="prompt">></span>
+              <span class="property">motto:</span>
+              <span class="value">"secure code, secure future, happy life"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="glitch" data-text="TECHNICAL_SKILLS & TOOLS">TECHNICAL_SKILLS & TOOLS</span>
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-shield-virus"></i> Malware Analysis</h3>
+          <div class="skill-items">
+            <span class="skill-tag">PEStudio</span>
+            <span class="skill-tag">Wireshark</span>
+            <span class="skill-tag">FakeNet-NG</span>
+            <span class="skill-tag">VirtualBox</span>
+            <span class="skill-tag">VirusTotal</span>
+            <span class="skill-tag">HxD</span>
+            <span class="skill-tag">Nmap</span>
+            <span class="skill-tag">Hashcat</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> AWS Cloud Services</h3>
+          <div class="skill-items">
+            <span class="skill-tag">IAM</span>
+            <span class="skill-tag">VPC</span>
+            <span class="skill-tag">Lambda (Serverless)</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">CloudFront</span>
+            <span class="skill-tag">RDS</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-cogs"></i> Infrastructure & Monitoring</h3>
+          <div class="skill-items">
+            <span class="skill-tag">CloudFormation (IaC)</span>
+            <span class="skill-tag">CloudWatch</span>
+            <span class="skill-tag">CloudTrail</span>
+            <span class="skill-tag">Cost Budgets</span>
+            <span class="skill-tag">GitLab CI/CD</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">PowerShell</span>
+            <span class="skill-tag">Bash</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Programming</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript (Basic)</span>
+            <span class="skill-tag">HTML/CSS (Basic)</span>
+            <span class="skill-tag">React/Vite (Basic)</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa="database"></i> Database & Security</h3>
+          <div class="skill-items">
+            <span class="skill-tag">SQLmap</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">Cryptography</span>
+            <span class="skill-tag">Hash Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="glitch" data-text="SECURITY_PROJECTS">SECURITY_PROJECTS</span>
+      </h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-indicator online"></span>
+              <span class="status-text">COMPLETED</span>
+            </div>
+            <i class="fas fa-bug project-icon"></i>
+          </div>
+          <div class="project-content">
+            <h3>Malware Analysis & Reverse Engineering</h3>
+            <p>Team Leader for IAM302 malware analysis project. Analyzed GorillaBotnet (ELF-based IoT botnet) with 300K+ infected devices using static/dynamic analysis and reverse engineering techniques.</p>
+            <div class="project-tech">
+              <span class="tech-tag">PEStudio</span>
+              <span class="tech-tag">Wireshark</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">VirtualBox</span>
+              <span class="tech-tag">FakeNet-NG</span>
+              <span class="tech-tag">Nmap</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mfree-Ioah67/malware-analysis-and-reverse-engineering" class="project-link" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-file-alt"></i> Report
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-indicator online"></span>
+              <span class="status-text">DEPLOYED</span>
+            </div>
+            <i class="fas fa-cloud project-icon"></i>
+          </div>
+          <div class="project-content">
+            <h3>AWS First Cloud Journey 2025</h3>
+            <p>AWS FCJ 2025 internship documentation with Hugo site. 12-week worklog, Blood Donation System project, 3 technical blog translations, 5 AWS events and DNA Analysis workshop on AWS.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Hugo</span>
+              <span class="tech-tag">GitHub Pages</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">CloudFormation</span>
+              <span class="tech-tag">React</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mfree-Ioah67/learning--aws--fcj2025" class="project-link" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://mfree-ioah67.github.io/learning--aws--fcj2025/" class="project-link" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Live Site
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-indicator warning"></span>
+              <span class="status-text">FRONTEND</span>
+            </div>
+            <i class="fas fa-code project-icon"></i>
+          </div>
+          <div class="project-content">
+            <h3>AWS Project Group - Frontend</h3>
+            <p>Frontend development for AWS group project. Built with React/Vite with automated deployment via GitLab CI/CD, S3, CloudFront and API Gateway integration.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">AWS S3</span>
+              <span class="tech-tag">CloudFront</span>
+              <span class="tech-tag">GitLab CI/CD</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://gitlab.com/aws-project-group-69/aws_project" class="project-link" target="_blank">
+              <i class="fab fa-gitlab"></i> GitLab
+            </a>
+            <a href="https://www.youtube.com/watch?v=Qh5tyL3Goeg" class="project-link" target="_blank">
+              <i class="fab fa-youtube"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section class="section" id="certs">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="glitch" data-text="CERTIFICATIONS & BADGES">CERTIFICATIONS & BADGES</span>
+      </h2>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3>Applied Cryptography Specialization</h3>
+          <p class="cert-status">Completed - Coursera</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/JTRJ9WC9QDCD" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <h3>Python for Everybody Specialization</h3>
+          <p class="cert-status">Completed - Coursera</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PICP4ADM6KBJ" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Google Cybersecurity Professional Certificate</h3>
+          <p class="cert-status">Completed - Coursera</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.coursera.org/account/accomplishments/specialization/YVMRW09MLZL6" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3>CCNA - Cisco Networking Academy</h3>
+          <p class="cert-status">Completed - Cisco</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.credly.com/badges/dcd249c3-b88a-4e95-949e-52ae09b56a3f" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Badge
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
+          <h3>CyberOps Associate</h3>
+          <p class="cert-status">Completed - Cisco</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.credly.com/badges/e5865820-c6cf-4869-9a5d-0d56b10dcc4e" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Badge
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fab fa-linux"></i>
+          </div>
+          <h3>LFS101: Introduction to Linux</h3>
+          <p class="cert-status">Completed - Linux Foundation</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.credly.com/badges/da8447d8-771f-4534-bf3a-054dab89e276" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Badge
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Honorable Student Awards</h3>
+          <p class="cert-status">FA24, SP25, SU25 - FPT University</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">3 Semesters</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://github.com/Mfree-Ioah67/certi_fu" target="_blank" class="project-link">
+              <i class="fas fa-trophy"></i> View Certificates
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="section" id="journey">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="glitch" data-text="LEARNING_JOURNEY">LEARNING_JOURNEY</span>
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2022 - Present</h3>
+            <h4>Information Assurance Student - FPT University</h4>
+            <p>Fourth-year Information Assurance student, studying cybersecurity and security techniques.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Sept - Dec 2025</h3>
+            <h4>FCJ Cloud Intern - Amazon Web Services Vietnam</h4>
+            <p>Internship at AWS Vietnam, learning about cloud computing and AWS services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="glitch" data-text="SECURE_CONTACT">SECURE_CONTACT</span>
+      </h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <a href="mailto:phamhoanghainguyen12a12dt@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>phamhoanghainguyen12a12dt@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/nguyên-phạm-hoàng-hải-5bba9532a" target="_blank" class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/Mfree-Ioah67" target="_blank" class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub Repository</span>
+          </a>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+84 829 533 727</span>
+          </div>
+        </div>
+        
+        <div class="terminal-contact">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="control red"></span>
+              <span class="control yellow"></span>
+              <span class="control green"></span>
+            </div>
+            <span class="terminal-title">secure-contact.sh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command-output" id="contactTerminal"></div>
+            <div class="command-line">
+              <span class="prompt">hainguyen@security:~$</span>
+              <span class="contact-typing-text"></span>
+              <span class="cursor">|</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">© 2025 Hai Nguyen — Information Assurance.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/animations.js"></script>
+  <script src="scripts/terminal.js"></script>
+</body>
+</html>
