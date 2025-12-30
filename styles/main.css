@@ -35,7 +35,7 @@ body {
   height: 100%;
   z-index: -1;
   background: var(--bg-darker);
-  opacity: 0.1;
+  opacity: 0.2;
   overflow: hidden;
 }
 
@@ -63,7 +63,7 @@ body {
   z-index: 2;
   background: linear-gradient(
     transparent 50%,
-    rgba(0, 255, 65, 0.03) 50%
+    rgba(0, 255, 65, 0.02) 50%
   );
   background-size: 100% 4px;
   animation: scan-lines 0.1s linear infinite;
