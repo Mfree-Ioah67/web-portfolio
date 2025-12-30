@@ -8,7 +8,7 @@ This portfolio represents my academic and professional journey as an Information
 
 ## 🚀 Live Demo
 
-**Portfolio URL:** [https://web-portfolio-mfree-ioah67.vercel.app/](https://web-portfolio-mfree-ioah67.vercel.app/)
+**Portfolio URL:** [https://web-portfolio-mfree-ioah67s-projects.vercel.app/](https://web-portfolio-mfree-ioah67s-projects.vercel.app/)
 
 ## 🛠️ Tech Stack
 
