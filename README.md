@@ -65,7 +65,7 @@ web-portfolio/
 - **Education:** Information Assurance Student at FPT University (2022-2026)
 - **Current Role:** FCJ Cloud Intern at Amazon Web Services Vietnam
 - **Focus Areas:** Blue Team Operations, Penetration Testing, Cloud Security
-- **Certifications:** Google Cybersecurity, Python for Everybody, Applied Cryptography, Cisco CCNA & CyberOps Associate
+- **Certifications:** Google Cybersecurity, Python for Everybody, Applied Cryptography, Cisco CCNA, CyberOps Associate & Ethical Hacker
 
 ## 🏆 Achievements
 

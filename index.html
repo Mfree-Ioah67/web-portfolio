@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hai Nguyen | Information Assurance Portfolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="styles/components.css">
@@ -33,7 +33,7 @@
     <div class="nav-container">
       <div class="nav-logo">
         <div class="logo-lock">
-          <i class="fas fa-shield-alt"></i>
+          <i class="fas fa-user-secret"></i>
         </div>
         <span class="logo-text">HAI.NGUYEN</span>
       </div>
@@ -215,34 +215,26 @@
             <span class="skill-tag">PEStudio</span>
             <span class="skill-tag">Wireshark</span>
             <span class="skill-tag">FakeNet-NG</span>
-            <span class="skill-tag">VirtualBox</span>
+            <span class="skill-tag">Autopsy</span>
             <span class="skill-tag">VirusTotal</span>
             <span class="skill-tag">HxD</span>
-            <span class="skill-tag">Nmap</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-bug"></i> Penetration Testing</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Burp Suite</span>
+            <span class="skill-tag">OWASP ZAP</span>
+            <span class="skill-tag">SQLmap</span>
             <span class="skill-tag">Hashcat</span>
           </div>
         </div>
         
         <div class="skill-category">
-          <h3><i class="fas fa-cloud"></i> AWS Cloud Services</h3>
+          <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
           <div class="skill-items">
-            <span class="skill-tag">IAM</span>
-            <span class="skill-tag">VPC</span>
-            <span class="skill-tag">Lambda (Serverless)</span>
-            <span class="skill-tag">EC2</span>
-            <span class="skill-tag">S3</span>
-            <span class="skill-tag">CloudFront</span>
-            <span class="skill-tag">RDS</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3><i class="fas fa-cogs"></i> Infrastructure & Monitoring</h3>
-          <div class="skill-items">
-            <span class="skill-tag">CloudFormation (IaC)</span>
-            <span class="skill-tag">CloudWatch</span>
-            <span class="skill-tag">CloudTrail</span>
-            <span class="skill-tag">Cost Budgets</span>
+            <span class="skill-tag">AWS</span>
             <span class="skill-tag">GitLab CI/CD</span>
             <span class="skill-tag">Linux</span>
             <span class="skill-tag">PowerShell</span>
@@ -256,19 +248,7 @@
             <span class="skill-tag">Python</span>
             <span class="skill-tag">C</span>
             <span class="skill-tag">Java</span>
-            <span class="skill-tag">JavaScript (Basic)</span>
-            <span class="skill-tag">HTML/CSS (Basic)</span>
-            <span class="skill-tag">React/Vite (Basic)</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3><i class="fas fa="database"></i> Database & Security</h3>
-          <div class="skill-items">
-            <span class="skill-tag">SQLmap</span>
-            <span class="skill-tag">SQL Server</span>
-            <span class="skill-tag">Cryptography</span>
-            <span class="skill-tag">Hash Analysis</span>
+            <span class="skill-tag">JavaScript</span>
           </div>
         </div>
       </div>
@@ -337,6 +317,58 @@
             </a>
             <a href="https://mfree-ioah67.github.io/learning--aws--fcj2025/" class="project-link" target="_blank">
               <i class="fas fa-external-link-alt"></i> Live Site
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-indicator online"></span>
+              <span class="status-text">COMPLETED</span>
+            </div>
+            <i class="fas fa-spider project-icon"></i>
+          </div>
+          <div class="project-content">
+            <h3>Web Security Labs - IAW301</h3>
+            <p>PortSwigger labs covering SQLi, XSS, IDOR, OAuth 2.0, OS Command Injection. Includes XSS AI Detector — 3 ML models (SVM 98.36%, PhoBERT 96.72%, DistilBERT 83.61%) with 52 handcrafted features, served via Flask API.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Burp Suite</span>
+              <span class="tech-tag">SQLmap</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">scikit-learn</span>
+              <span class="tech-tag">Flask</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mfree-Ioah67/web-security-portswigger" class="project-link" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-indicator online"></span>
+              <span class="status-text">COMPLETED</span>
+            </div>
+            <i class="fas fa-user-secret project-icon"></i>
+          </div>
+          <div class="project-content">
+            <h3>Ethical Hacking - HOD402</h3>
+            <p>Full offensive security lifecycle labs: OSINT, network scanning, exploitation (SET, BeEF, Ettercap), web app pentesting and capstone pentest engagement. Team Noname — IA1801.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Kali Linux</span>
+              <span class="tech-tag">Nmap</span>
+              <span class="tech-tag">Metasploit</span>
+              <span class="tech-tag">Wireshark</span>
+              <span class="tech-tag">OWASP ZAP</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mfree-Ioah67/ethical-hacking-hod402" class="project-link" target="_blank">
+              <i class="fab fa-github"></i> GitHub
             </a>
           </div>
         </div>
@@ -489,6 +521,25 @@
           </div>
           <div class="cert-links" style="margin-top: 1rem;">
             <a href="https://www.credly.com/badges/da8447d8-771f-4534-bf3a-054dab89e276" target="_blank" class="project-link">
+              <i class="fas fa-certificate"></i> View Badge
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-user-secret"></i>
+          </div>
+          <h3>Ethical Hacker</h3>
+          <p class="cert-status">Completed - Cisco</p>
+          <div class="cert-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100% Complete</span>
+          </div>
+          <div class="cert-links" style="margin-top: 1rem;">
+            <a href="https://www.credly.com/badges/578b2528-3e8e-470c-96cb-a365e6b4b2c0" target="_blank" class="project-link">
               <i class="fas fa-certificate"></i> View Badge
             </a>
           </div>
