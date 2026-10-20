@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/sections/Hero";
 import About from "@/sections/About";
 import Competitions from "@/sections/Competitions";
+import Labs from "@/sections/Labs";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Hero />
         <About />
         <Competitions />
+        <Labs />
       </main>
       <Footer />
     </>

@@ -23,6 +23,7 @@ export const site = {
 export const nav: NavItem[] = [
   { id: "about", label: "About" },
   { id: "competitions", label: "Competitions" },
+  { id: "labs", label: "Labs" },
 ];
 
 export const highlights = [
@@ -113,5 +114,41 @@ export const competitions: Competition[] = [
     result: "Participant",
     detail: "International Olympiad in Cryptography, individual and team rounds.",
     year: "2026",
+  },
+];
+
+export interface Lab {
+  platform: string;
+  title: string;
+  period: string;
+  points: string[];
+  featured?: boolean;
+}
+
+export const labs: Lab[] = [
+  {
+    platform: "Hack The Box",
+    title: "Pro Lab: Dante",
+    period: "Oct 2026",
+    points: [
+      "Completed the lab (27/27 flags): foothold on a public web server, pivot into the internal network, Domain Admin.",
+      "Wrote a full penetration test report with findings, severity ratings and remediation.",
+    ],
+    featured: true,
+  },
+  {
+    platform: "TryHackMe",
+    title: "Wreath Network & Compromising Active Directory",
+    period: "Aug – Sep 2026",
+    points: [
+      "Wreath: compromised a 3-host network through web exploitation, pivoting and privilege escalation; wrote a report.",
+      "Completed the Compromising Active Directory path (7 rooms) and Attacktive Directory.",
+    ],
+  },
+  {
+    platform: "Hack The Box & TryHackMe",
+    title: "Machines",
+    period: "Jun – Aug 2026",
+    points: ["HTB: DevHub, Enigma, Optimum.", "THM: Blue, Ice, Kenobi, Network Services 1–2."],
   },
 ];
