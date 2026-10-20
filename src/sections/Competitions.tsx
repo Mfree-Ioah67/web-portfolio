@@ -3,16 +3,16 @@ import { competitions } from "@/content/data";
 
 export default function Competitions() {
   return (
-    <Section id="competitions" index="02" title="Competitions">
-      <ol className="board">
+    <Section id="competitions" title="Competitions">
+      <ol className="rows">
         {competitions.map((c) => (
-          <li key={c.name} className={`board__row${c.top ? " board__row--top" : ""}`}>
-            <span className="board__year">{c.year}</span>
-            <div className="board__main">
-              <h3 className="board__name">{c.name}</h3>
-              {c.detail && <p className="board__detail">{c.detail}</p>}
-            </div>
-            <span className="board__result">{c.result}</span>
+          <li key={c.name} className={`row${c.top ? " row--top" : ""}`}>
+            <span className="row__name">{c.name}</span>
+            <span className="row__detail">
+              {c.year}
+              {c.detail && ` · ${c.detail}`}
+            </span>
+            <span className="row__aside">{c.result}</span>
           </li>
         ))}
       </ol>

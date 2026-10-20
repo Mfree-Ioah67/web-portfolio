@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Hero from "@/sections/Hero";
+import Intro from "@/sections/Intro";
 import About from "@/sections/About";
-import Competitions from "@/sections/Competitions";
 import Labs from "@/sections/Labs";
+import Competitions from "@/sections/Competitions";
 import Projects from "@/sections/Projects";
 import Certs from "@/sections/Certs";
 import Contact from "@/sections/Contact";
@@ -16,10 +16,10 @@ export default function App() {
       </a>
       <Header />
       <main id="main">
-        <Hero />
+        <Intro />
         <About />
-        <Competitions />
         <Labs />
+        <Competitions />
         <Projects />
         <Certs />
         <Contact />

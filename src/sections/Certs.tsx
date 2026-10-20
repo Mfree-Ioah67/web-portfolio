@@ -1,39 +1,27 @@
-import Icon from "@/components/Icon";
 import Section from "@/components/Section";
 import { certifications } from "@/content/data";
 
 export default function Certs() {
   return (
-    <Section id="certifications" index="05" title="Certifications">
-      <ul className="certs">
-        {certifications.map((c) => {
-          const body = (
-            <>
-              <div className="cert__text">
-                <h3 className="cert__title">{c.title}</h3>
-                <p className="cert__issuer">
-                  {c.issuer} · {c.date}
-                </p>
-              </div>
-              {c.url && (
-                <span className="cert__verify">
-                  Verify <Icon name="external" size={14} />
-                </span>
-              )}
-            </>
-          );
-          return (
-            <li key={c.title}>
+    <Section id="certifications" title="Certifications">
+      <ul className="rows">
+        {certifications.map((c) => (
+          <li key={c.title} className="row">
+            <span className="row__name">{c.title}</span>
+            <span className="row__detail">
+              {c.issuer} · {c.date}
+            </span>
+            <span className="row__aside">
               {c.url ? (
-                <a className="card cert cert--link" href={c.url} target="_blank" rel="noreferrer">
-                  {body}
+                <a href={c.url} target="_blank" rel="noreferrer">
+                  Verify
                 </a>
               ) : (
-                <div className="card cert">{body}</div>
+                <span style={{ color: "var(--dim)" }}>On request</span>
               )}
-            </li>
-          );
-        })}
+            </span>
+          </li>
+        ))}
       </ul>
     </Section>
   );
