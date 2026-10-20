@@ -23,7 +23,7 @@ src/
 ├── components/          Header, Footer, Section, Entry
 ├── sections/            Intro, About, Labs, Competitions, Projects, Certs, Contact
 └── styles.css
-```bash
+```
 
 ## Development
 
@@ -32,4 +32,4 @@ npm ci
 npm run dev        # http://localhost:3000
 npm run build      # typecheck + production build into dist/
 npm run preview    # serve dist/
-```bash
+```
