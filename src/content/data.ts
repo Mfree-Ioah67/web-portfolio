@@ -25,6 +25,7 @@ export const nav: NavItem[] = [
   { id: "competitions", label: "Competitions" },
   { id: "labs", label: "Labs" },
   { id: "projects", label: "Projects" },
+  { id: "certifications", label: "Certs" },
 ];
 
 export const highlights = [
@@ -190,5 +191,35 @@ export const projects: Project[] = [
       { label: "Report site", url: "https://mfree-ioah67.github.io/learning--aws--fcj2025/" },
       { label: "Repository", url: "https://github.com/Mfree-Ioah67/learning--aws--fcj2025" },
     ],
+  },
+];
+
+export interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  url?: string;
+}
+
+export const certifications: Certification[] = [
+  { title: "Pro Lab: Dante — Certificate of Completion", issuer: "Hack The Box", date: "Oct 2026" },
+  {
+    title: "Ethical Hacker",
+    issuer: "Cisco Networking Academy",
+    date: "Mar 2026",
+    url: "https://www.credly.com/badges/578b2528-3e8e-470c-96cb-a365e6b4b2c0",
+  },
+  { title: "CCNA: Switching, Routing, and Wireless Essentials", issuer: "Cisco Networking Academy", date: "Jul 2026" },
+  {
+    title: "CyberOps Associate",
+    issuer: "Cisco Networking Academy",
+    date: "Oct 2024",
+    url: "https://www.credly.com/badges/e5865820-c6cf-4869-9a5d-0d56b10dcc4e",
+  },
+  {
+    title: "CCNA: Introduction to Networks",
+    issuer: "Cisco Networking Academy",
+    date: "Jul 2024",
+    url: "https://www.credly.com/badges/dcd249c3-b88a-4e95-949e-52ae09b56a3f",
   },
 ];
