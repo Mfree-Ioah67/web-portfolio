@@ -15,13 +15,31 @@ export const site = {
   source: "https://github.com/Mfree-Ioah67/web-portfolio",
 };
 
-export const nav = [
-  { id: "about", label: "About" },
-  { id: "labs", label: "Labs" },
-  { id: "competitions", label: "Competitions" },
-  { id: "projects", label: "Projects" },
-  { id: "certifications", label: "Certifications" },
-  { id: "contact", label: "Contact" },
+export interface Page {
+  id: string;
+  path: string;
+  title: string;
+  /** One line under the title on the home page. */
+  teaser: string;
+}
+
+export const pages: Page[] = [
+  { id: "about", path: "/about", title: "About", teaser: "Who I am, what I'm doing now, education and toolbox." },
+  { id: "labs", path: "/labs", title: "Labs & training", teaser: "Pro Lab Dante 27/27, Wreath, the Active Directory path." },
+  {
+    id: "competitions",
+    path: "/competitions",
+    title: "Competitions",
+    teaser: "1st place at Breach Point CTF II, full score at The Catch, FLARE-On 13 finisher.",
+  },
+  { id: "projects", path: "/projects", title: "Projects", teaser: "A black-box web pentest, web security labs, an AWS deployment." },
+  {
+    id: "certifications",
+    path: "/certifications",
+    title: "Certifications",
+    teaser: "Hack The Box Pro Lab Dante and four Cisco credentials, each with a verification link.",
+  },
+  { id: "contact", path: "/contact", title: "Contact", teaser: "Email, GitHub, LinkedIn." },
 ];
 
 export const highlights = [

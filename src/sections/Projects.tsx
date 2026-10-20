@@ -1,10 +1,9 @@
 import Entry from "@/components/Entry";
-import Section from "@/components/Section";
 import { projects } from "@/content/data";
 
 export default function Projects() {
   return (
-    <Section id="projects" title="Projects">
+    <>
       {projects.map((p) => (
         <Entry key={p.title} title={p.title} meta={p.period} sub={p.role}>
           <p>{p.description}</p>
@@ -24,6 +23,6 @@ export default function Projects() {
           </div>
         </Entry>
       ))}
-    </Section>
+    </>
   );
 }

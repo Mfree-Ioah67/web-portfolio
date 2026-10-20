@@ -1,9 +1,8 @@
-import Section from "@/components/Section";
 import { about } from "@/content/data";
 
 export default function About() {
   return (
-    <Section id="about" title="About">
+    <>
       <div className="prose">
         {about.bio.map((p) => (
           <p key={p}>{p}</p>
@@ -21,6 +20,6 @@ export default function About() {
           </div>
         ))}
       </dl>
-    </Section>
+    </>
   );
 }

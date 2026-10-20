@@ -1,9 +1,8 @@
-import Section from "@/components/Section";
 import { site } from "@/content/data";
 
 export default function Contact() {
   return (
-    <Section id="contact" title="Contact">
+    <>
       <p>{site.contactNote}</p>
       <dl className="facts">
         <div style={{ display: "contents" }}>
@@ -29,6 +28,6 @@ export default function Contact() {
           </dd>
         </div>
       </dl>
-    </Section>
+    </>
   );
 }
