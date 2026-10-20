@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="16" fill="#0a0a0a"/>
-  <text x="10" y="62" font-family="monospace" font-size="42" font-weight="bold" fill="#00ff41">&gt;_</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0d0d0d"/>
+  <!-- Hat brim -->
+  <rect x="4" y="14" width="24" height="4" rx="2" fill="#ff2020"/>
+  <!-- Hat crown -->
+  <rect x="9" y="5" width="14" height="11" rx="3" fill="#ff2020"/>
+  <!-- Head -->
+  <ellipse cx="16" cy="21" rx="8" ry="7" fill="#ff2020"/>
+  <!-- Glasses left -->
+  <rect x="7" y="19" width="6" height="4" rx="1.5" fill="#0d0d0d"/>
+  <!-- Glasses right -->
+  <rect x="19" y="19" width="6" height="4" rx="1.5" fill="#0d0d0d"/>
+  <!-- Glasses bridge -->
+  <rect x="13" y="21" width="6" height="1" fill="#0d0d0d"/>
+  <!-- Body -->
+  <ellipse cx="16" cy="30" rx="10" ry="5" fill="#ff2020"/>
 </svg>

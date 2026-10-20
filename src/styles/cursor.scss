@@ -1,0 +1,73 @@
+// Hide system cursor everywhere
+*, *::before, *::after { cursor: none !important; }
+
+.cursor__dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 4px; height: 4px;
+  background: var(--red);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 6px var(--red);
+}
+
+.cursor__cross {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s, height 0.15s;
+
+  &.cursor--hover {
+    width: 52px;
+    height: 52px;
+
+    .cursor__line { background: var(--blue); box-shadow: 0 0 4px var(--blue); }
+    .cursor__corner { border-color: var(--blue); box-shadow: 0 0 4px var(--blue); }
+  }
+}
+
+// Cross lines — gap in center
+.cursor__line {
+  position: absolute;
+  background: var(--red);
+  box-shadow: 0 0 4px var(--red);
+  opacity: 0.9;
+
+  &--top, &--bottom {
+    left: 50%; top: 0;
+    width: 1px; height: 30%;
+    transform: translateX(-50%);
+  }
+  &--bottom { top: auto; bottom: 0; }
+
+  &--left, &--right {
+    top: 50%; left: 0;
+    height: 1px; width: 30%;
+    transform: translateY(-50%);
+  }
+  &--right { left: auto; right: 0; }
+}
+
+// Corner brackets
+.cursor__corner {
+  position: absolute;
+  width: 7px; height: 7px;
+  border-color: var(--red);
+  border-style: solid;
+  box-shadow: 0 0 4px var(--red);
+
+  &--tl { top: 0; left: 0;  border-width: 1.5px 0 0 1.5px; }
+  &--tr { top: 0; right: 0; border-width: 1.5px 1.5px 0 0; }
+  &--bl { bottom: 0; left: 0;  border-width: 0 0 1.5px 1.5px; }
+  &--br { bottom: 0; right: 0; border-width: 0 1.5px 1.5px 0; }
+}
+
+@media (hover: none) {
+  .cursor__dot,
+  .cursor__cross { display: none; }
+}

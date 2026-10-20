@@ -1,0 +1,50 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+// Section title
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+
+  &__text {
+    font-family: var(--font-mono);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    color: var(--text);
+  }
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    &--red  { background: linear-gradient(90deg, var(--red), transparent); }
+    &--blue { background: linear-gradient(90deg, var(--blue), transparent); }
+  }
+}
+
+// Footer
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+
+  &__motto {
+    margin-top: 0.4rem;
+    font-style: italic;
+    color: var(--red);
+    opacity: 0.7;
+  }
+}
