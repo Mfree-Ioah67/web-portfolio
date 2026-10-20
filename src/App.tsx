@@ -6,6 +6,7 @@ import Competitions from "@/sections/Competitions";
 import Labs from "@/sections/Labs";
 import Projects from "@/sections/Projects";
 import Certs from "@/sections/Certs";
+import Contact from "@/sections/Contact";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Labs />
         <Projects />
         <Certs />
+        <Contact />
       </main>
       <Footer />
     </>

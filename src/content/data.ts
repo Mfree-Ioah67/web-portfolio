@@ -26,6 +26,7 @@ export const nav: NavItem[] = [
   { id: "labs", label: "Labs" },
   { id: "projects", label: "Projects" },
   { id: "certifications", label: "Certs" },
+  { id: "contact", label: "Contact" },
 ];
 
 export const highlights = [

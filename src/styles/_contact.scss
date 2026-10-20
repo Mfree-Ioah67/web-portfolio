@@ -1,0 +1,62 @@
+@use "mixins" as m;
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 40px;
+  align-items: start;
+
+  @include m.below(m.$md) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  &__lead {
+    max-width: 30em;
+    color: var(--text-dim);
+    font-size: 17px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: var(--red);
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--red);
+  }
+
+  &__text {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__value {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
