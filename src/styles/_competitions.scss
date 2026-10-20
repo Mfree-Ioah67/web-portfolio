@@ -1,0 +1,81 @@
+@use "mixins" as m;
+
+.board {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  overflow: hidden;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.2s;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    &--top {
+      background: var(--red-soft);
+      box-shadow: inset 3px 0 0 var(--red);
+
+      &:hover {
+        background: var(--red-soft);
+      }
+    }
+
+    @include m.below(m.$sm) {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4px 12px;
+      padding: 16px;
+    }
+  }
+
+  &__year {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 13px;
+
+    @include m.below(m.$sm) {
+      display: none;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__detail {
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+
+  &__result {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+
+    .board__row--top & {
+      color: var(--red);
+    }
+
+    @include m.below(m.$sm) {
+      font-size: 13px;
+      white-space: normal;
+    }
+  }
+}

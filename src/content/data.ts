@@ -20,7 +20,10 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/ph%E1%BA%A1m-ho%C3%A0ng-h%E1%BA%A3i-nguy%C3%AAn-5bba9532a",
 };
 
-export const nav: NavItem[] = [{ id: "about", label: "About" }];
+export const nav: NavItem[] = [
+  { id: "about", label: "About" },
+  { id: "competitions", label: "Competitions" },
+];
 
 export const highlights = [
   { value: "1st", label: "Breach Point CTF Season II" },
@@ -78,3 +81,37 @@ export const about = {
     { label: "Scripting", items: ["Python"] },
   ],
 };
+
+export interface Competition {
+  name: string;
+  result: string;
+  detail: string;
+  year: string;
+  top?: boolean;
+}
+
+export const competitions: Competition[] = [
+  {
+    name: "Breach Point CTF Season II",
+    result: "1st place",
+    detail: "36-hour national CTF, team FPT DarkHotel.",
+    year: "2026",
+    top: true,
+  },
+  {
+    name: "Cybersecurity Student Contest Vietnam (CSCV)",
+    result: "Top 35 / 334",
+    detail: "Team FPT DarkHotel.",
+    year: "2026",
+  },
+  { name: "The Catch (CESNET)", result: "17th / 208", detail: "Individual.", year: "2026" },
+  { name: "FLARE-On 13", result: "Finisher", detail: "All 9 reverse-engineering challenges solved.", year: "2026" },
+  { name: "UIT Net Challenges", result: "Encouragement Award", detail: "", year: "2026" },
+  { name: "Pointer Overflow CTF", result: "34 solved", detail: "Solo.", year: "2026" },
+  {
+    name: "NSUCRYPTO",
+    result: "Participant",
+    detail: "International Olympiad in Cryptography, individual and team rounds.",
+    year: "2026",
+  },
+];
