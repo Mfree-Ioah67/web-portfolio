@@ -20,7 +20,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/ph%E1%BA%A1m-ho%C3%A0ng-h%E1%BA%A3i-nguy%C3%AAn-5bba9532a",
 };
 
-export const nav: NavItem[] = [];
+export const nav: NavItem[] = [{ id: "about", label: "About" }];
 
 export const highlights = [
   { value: "1st", label: "Breach Point CTF Season II" },
@@ -55,3 +55,26 @@ export const terminalScript: TerminalEntry[] = [
     remote: true,
   },
 ];
+
+export const about = {
+  bio: [
+    "I'm a final-year Information Assurance student at FPT University in Ho Chi Minh City, focused on offensive security.",
+    "Most of what I know comes from hands-on work: Hack The Box and TryHackMe labs, a full Pro Lab, CTF competitions and a black-box assessment of a live website. I document every lab I finish.",
+  ],
+  education: {
+    school: "FPT University",
+    degree: "BSc Information Assurance",
+    detail: "GPA 3.2 / 4.0 · Expected May 2027",
+    note: "Honorable Student, four semesters (2024–2026)",
+  },
+  experience: {
+    org: "Amazon Web Services Vietnam",
+    role: "FCJ Cloud Intern, First Cloud Journey",
+    period: "Sep – Dec 2025",
+  },
+  toolbox: [
+    { label: "Tools", items: ["Nmap", "Gobuster", "Burp Suite", "Metasploit", "John the Ripper"] },
+    { label: "Systems", items: ["Kali Linux", "Parrot OS", "Windows"] },
+    { label: "Scripting", items: ["Python"] },
+  ],
+};

@@ -1,0 +1,54 @@
+@use "mixins" as m;
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+
+  @include m.below(m.$md) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  &__bio {
+    display: grid;
+    gap: 16px;
+    color: var(--text-dim);
+    font-size: 17px;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__heading {
+    margin: 8px 0 2px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  &__meta {
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+}
+
+.toolbox {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 12px;
+    align-items: baseline;
+
+    dt {
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+  }
+}
