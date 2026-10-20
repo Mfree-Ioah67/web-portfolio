@@ -173,11 +173,23 @@ export interface Certification {
   title: string;
   issuer: string;
   date: string;
+  /** Public page where the credential can be checked. */
   url?: string;
+  /** Credential ID to enter on that page, when the page is a lookup form. */
+  id?: string;
+  /** Copy of the certificate served from public/. */
+  file?: string;
 }
 
 export const certifications: Certification[] = [
-  { title: "Pro Lab: Dante — Certificate of Completion", issuer: "Hack The Box", date: "Oct 2026" },
+  {
+    title: "Pro Lab: Dante — Certificate of Completion",
+    issuer: "Hack The Box",
+    date: "7 Oct 2026",
+    url: "https://www.hackthebox.com/certificates",
+    id: "HTBCERT-E8663A3FDE",
+    file: "/htb-prolab-dante-certificate.pdf",
+  },
   {
     title: "Ethical Hacker",
     issuer: "Cisco Networking Academy",
