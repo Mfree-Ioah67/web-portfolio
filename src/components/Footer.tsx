@@ -1,8 +1,14 @@
+import { site } from "@/content/data";
+
 export default function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__copy">© 2025 Hai Nguyen — Information Assurance</p>
-      <p className="footer__motto">"Secure code, secure future, happy life."</p>
+      <div className="container footer__inner">
+        <p>
+          © {new Date().getFullYear()} {site.name}
+        </p>
+        <p className="footer__motto">"{site.motto}"</p>
+      </div>
     </footer>
   );
 }

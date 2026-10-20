@@ -1,0 +1,101 @@
+@use "mixins" as m;
+
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--header-h);
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
+
+  &--solid {
+    border-bottom-color: var(--border);
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(12px);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    height: 100%;
+  }
+
+  &__logo {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &__prompt {
+    color: var(--red);
+  }
+
+  &__nav {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__link {
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    transition:
+      color 0.2s,
+      background-color 0.2s;
+
+    &:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  &__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  @include m.below(m.$md) {
+    &__toggle {
+      display: inline-flex;
+    }
+
+    &__nav {
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 4px 16px 12px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10, 10, 11, 0.97);
+
+      &--open {
+        display: flex;
+      }
+    }
+
+    &__link {
+      padding: 14px 4px;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      font-size: 15px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

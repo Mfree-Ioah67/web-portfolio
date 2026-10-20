@@ -1,7 +1,4 @@
-@use "variables";
-@use "reset";
-@use "layout";
+@use "base";
+@use "components";
 @use "header";
-@use "hero";
-@use "sections";
-@use "cursor";
+@use "footer";
