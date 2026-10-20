@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/sections/Hero";
 
 export default function App() {
   return (
@@ -8,7 +9,9 @@ export default function App() {
         Skip to content
       </a>
       <Header />
-      <main id="main"></main>
+      <main id="main">
+        <Hero />
+      </main>
       <Footer />
     </>
   );
