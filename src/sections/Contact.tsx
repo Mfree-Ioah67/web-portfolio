@@ -3,8 +3,8 @@ import { site } from "@/content/data";
 export default function Contact() {
   return (
     <>
-      <p>{site.contactNote}</p>
-      <dl className="facts">
+      <p data-reveal>{site.contactNote}</p>
+      <dl className="facts" data-reveal>
         <div style={{ display: "contents" }}>
           <dt>Email</dt>
           <dd>

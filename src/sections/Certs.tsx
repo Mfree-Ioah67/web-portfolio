@@ -4,7 +4,7 @@ export default function Certs() {
   return (
     <ul className="rows">
       {certifications.map((c) => (
-        <li key={c.title} className="row">
+        <li key={c.title} className="row" data-reveal>
           <span className="row__name">{c.title}</span>
           <span className="row__detail">
             {c.issuer} · {c.date}

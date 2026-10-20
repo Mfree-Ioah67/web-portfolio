@@ -11,7 +11,7 @@ interface Props {
 // an optional sub-line, then whatever body the section passes in.
 export default function Entry({ title, meta, sub, children }: Props) {
   return (
-    <article className="entry">
+    <article className="entry" data-reveal>
       <div className="entry__head">
         <h3>{title}</h3>
         {meta && <span className="entry__meta">{meta}</span>}

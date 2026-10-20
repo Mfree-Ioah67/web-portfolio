@@ -5,6 +5,8 @@
 export const site = {
   name: "Phạm Hoàng Hải Nguyên",
   headline: "Final-year Information Assurance student, focused on offensive security.",
+  /** Part of the headline shown "redacted" before it is revealed. */
+  headlineMark: "offensive security",
   summary:
     "I learn by doing: Hack The Box and TryHackMe labs, a full Pro Lab, CTF competitions with team FPT DarkHotel, and a black-box assessment of a live website. Looking for a Red Team or penetration testing internship in Ho Chi Minh City.",
   contactNote: "Email is the fastest way to reach me.",

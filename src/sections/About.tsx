@@ -5,10 +5,12 @@ export default function About() {
     <>
       <div className="prose">
         {about.bio.map((p) => (
-          <p key={p}>{p}</p>
+          <p key={p} data-reveal>
+            {p}
+          </p>
         ))}
       </div>
-      <dl className="facts">
+      <dl className="facts" data-reveal>
         <div style={{ display: "contents" }}>
           <dt className="now">Now</dt>
           <dd>{about.now}</dd>

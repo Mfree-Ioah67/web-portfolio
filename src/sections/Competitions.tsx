@@ -4,7 +4,7 @@ export default function Competitions() {
   return (
     <ol className="rows">
       {competitions.map((c) => (
-        <li key={c.name} className={`row${c.top ? " row--top" : ""}`}>
+        <li key={c.name} className={`row${c.top ? " row--top" : ""}`} data-reveal>
           <span className="row__name">{c.name}</span>
           <span className="row__detail">
             {c.year}
