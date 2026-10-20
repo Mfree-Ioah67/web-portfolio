@@ -7,9 +7,11 @@ Live: <https://web-portfolio-mfree-ioah67s-projects.vercel.app/>
 
 ## Stack
 
-- Vite 6, React 18, TypeScript
+- Vite 6, React 18, TypeScript, React Router 7
 - One plain CSS file, system fonts, no third-party requests
-- Deployed on Vercel
+- Page transitions via the View Transitions API (progressive; off under
+  `prefers-reduced-motion`)
+- Deployed on Vercel; `vercel.json` rewrites deep links to `index.html`
 
 All page content lives in [`src/content/data.ts`](src/content/data.ts) and
 mirrors the CV. Everything else is layout.
@@ -18,10 +20,12 @@ mirrors the CV. Everything else is layout.
 
 ```text
 src/
-├── App.tsx              section order
+├── App.tsx              routes: / and one per entry in content.pages
 ├── content/data.ts      all text, links and lists
-├── components/          Header, Footer, Section, Entry
-├── sections/            Intro, About, Labs, Competitions, Projects, Certs, Contact
+├── navigation.ts        sets the slide direction before a navigation
+├── pages/Home.tsx       landing page with the table of contents
+├── components/          Layout, Header, Footer, SectionPage, Entry
+├── sections/            About, Labs, Competitions, Projects, Certs, Contact
 └── styles.css
 ```
 
