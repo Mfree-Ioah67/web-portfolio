@@ -1,13 +1,9 @@
 import Icon from "@/components/Icon";
-import NetworkCanvas from "@/components/NetworkCanvas";
-import Terminal from "@/components/Terminal";
-import { highlights, site, terminalScript } from "@/content/data";
+import { highlights, site } from "@/content/data";
 
 export default function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <NetworkCanvas className="hero__canvas" />
-
       <div className="container hero__inner">
         <div className="hero__intro">
           <p className="hero__eyebrow">{site.role}</p>
@@ -27,8 +23,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        <Terminal className="hero__terminal" title="htb/optimum: replay" script={terminalScript} />
 
         <ul className="hero__stats">
           {highlights.map((h) => (
