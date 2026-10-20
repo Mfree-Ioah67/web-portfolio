@@ -1,14 +1,32 @@
 :root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Colour tokens are hex: the background canvas reads --dim and --accent. */
+:root,
+:root[data-theme="dark"] {
   --bg: #141311;
   --text: #e9e5dd;
   --dim: #9b958a;
   --line: #2b2825;
   --accent: #e5484d;
-  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --hover: rgba(255, 255, 255, 0.04);
+  --panel: rgba(20, 19, 17, 0.72);
   color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f3efe6;
+  --text: #1d1b18;
+  --dim: #6c665c;
+  --line: #dcd5c8;
+  --accent: #c4363b;
+  --hover: rgba(0, 0, 0, 0.04);
+  --panel: rgba(243, 239, 230, 0.8);
+  color-scheme: light;
 }
 
 * {
@@ -242,7 +260,7 @@ a[target="_blank"]::after {
   position: absolute;
   inset: 0 -14px;
   z-index: -1;
-  background: rgba(255, 255, 255, 0.035);
+  background: var(--hover);
   transform: scaleX(0);
   transform-origin: left;
 }
@@ -504,6 +522,154 @@ a[target="_blank"]::after {
   }
 }
 
+/* Background canvas: full viewport, behind everything, faded over the
+   text column so it never fights with the words. */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.25) 70%, #000 100%);
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.25) 70%, #000 100%);
+}
+
+/* Background switcher and theme toggle: fixed bottom-right on wide
+   screens, part of the footer on narrow ones. */
+.controls {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 15;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bgswitch,
+.themebtn {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.bgswitch {
+  gap: 2px;
+  padding: 4px;
+}
+
+.bgswitch__label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px 0 8px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.bgswitch__label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.bgswitch__options {
+  display: flex;
+  gap: 2px;
+}
+
+/* With a mouse on a wide screen the switcher stays collapsed to its label
+   (so it never covers the text column) and slides open on hover or when
+   a keyboard user tabs into it. */
+@media (hover: hover) and (min-width: 761px) {
+  .bgswitch {
+    cursor: default;
+  }
+
+  .bgswitch__label {
+    padding: 5px 10px 5px 8px;
+  }
+
+  .bgswitch__options {
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .bgswitch:hover .bgswitch__options,
+  .bgswitch:focus-within .bgswitch__options {
+    max-width: 420px;
+    opacity: 1;
+  }
+}
+
+.bgswitch button,
+.themebtn {
+  border: 0;
+  color: var(--dim);
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.bgswitch button {
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: none;
+}
+
+.bgswitch button:hover {
+  color: var(--text);
+}
+
+.bgswitch button[aria-pressed="true"] {
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.themebtn {
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.themebtn:hover {
+  border-color: var(--dim);
+}
+
+@media (max-width: 760px) {
+  .controls {
+    position: static;
+    justify-content: flex-start;
+    margin-top: 14px;
+  }
+
+  .bgswitch__label {
+    display: none;
+  }
+
+  .bgswitch button {
+    padding: 5px 9px;
+  }
+}
+
 /* Footer */
 
 .footer {
@@ -511,6 +677,12 @@ a[target="_blank"]::after {
   border-top: 1px solid var(--line);
   color: var(--dim);
   font-size: 14px;
+}
+
+@media (min-width: 761px) {
+  .footer {
+    padding-bottom: 88px;
+  }
 }
 
 .footer .wrap {
@@ -606,22 +778,68 @@ a[target="_blank"]::after {
     }
   }
 
-  /* Page transitions: the header stays put, the rest slides in the
-     direction of travel (set on <html data-dir> before navigating). */
-  ::view-transition-old(root) {
+  .bgswitch button,
+  .themebtn {
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s;
+  }
+
+  .bgswitch__options {
+    transition:
+      max-width 0.45s var(--ease-out),
+      opacity 0.25s;
+  }
+
+  /* Page transitions. Only <main> moves: it slides in the direction of
+     travel (set on <html data-dir> before navigating). The root, which
+     holds the background canvas and footer, swaps without animating, so
+     the background never blinks. */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+
+  ::view-transition-old(page) {
     animation: 140ms ease-in both page-out;
   }
 
-  ::view-transition-new(root) {
+  ::view-transition-new(page) {
     animation: 220ms ease-out both page-in;
   }
 
-  html[data-dir="back"] ::view-transition-old(root) {
+  html[data-dir="back"]::view-transition-old(page) {
     animation-name: page-out-back;
   }
 
-  html[data-dir="back"] ::view-transition-new(root) {
+  html[data-dir="back"]::view-transition-new(page) {
     animation-name: page-in-back;
+  }
+
+  /* Theme switch: the new theme spreads in a circle from the toggle. */
+  html[data-dir="theme"]::view-transition-new(root) {
+    animation: theme-reveal 0.6s var(--ease-out);
+  }
+}
+
+main {
+  view-transition-name: page;
+}
+
+/* During a theme switch everything belongs to the root, so the whole
+   page is revealed by the one circle. */
+html[data-dir="theme"] .header,
+html[data-dir="theme"] main {
+  view-transition-name: none;
+}
+
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+  to {
+    clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 50%));
   }
 }
 

@@ -9,6 +9,8 @@ Live: <https://web-portfolio-mfree-ioah67s-projects.vercel.app/>
 
 - Vite 6, React 18, TypeScript, React Router 7
 - One plain CSS file, system fonts, no third-party requests
+- Animated wireframe backgrounds (Canvas 2D, no 3D library): polyhedra,
+  cubes, terrain, plexus; dark/light theme; both remembered locally
 - Page transitions via the View Transitions API (progressive; off under
   `prefers-reduced-motion`)
 - Deployed on Vercel; `vercel.json` rewrites deep links to `index.html`
@@ -24,7 +26,9 @@ src/
 ├── content/data.ts      all text, links and lists
 ├── navigation.ts        sets the slide direction before a navigation
 ├── pages/Home.tsx       landing page with the table of contents
-├── components/          Layout, Header, Footer, SectionPage, Entry
+├── background/          canvas backgrounds: geometry, scenes, component
+├── components/          Layout, Header, Footer, Controls, SectionPage, Entry, RiseText
+├── hooks/               useReveal, useArrowNav, useChoice
 ├── sections/            About, Labs, Competitions, Projects, Certs, Contact
 └── styles.css
 ```

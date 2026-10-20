@@ -1,6 +1,7 @@
+import type { ReactNode } from "react";
 import { site } from "@/content/data";
 
-export default function Footer() {
+export default function Footer({ children }: { children?: ReactNode }) {
   return (
     <footer className="footer">
       <div className="wrap">
@@ -13,6 +14,7 @@ export default function Footer() {
             Source
           </a>
         </p>
+        {children}
       </div>
     </footer>
   );
