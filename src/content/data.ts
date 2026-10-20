@@ -196,7 +196,12 @@ export const certifications: Certification[] = [
     date: "Mar 2026",
     url: "https://www.credly.com/badges/578b2528-3e8e-470c-96cb-a365e6b4b2c0",
   },
-  { title: "CCNA: Switching, Routing, and Wireless Essentials", issuer: "Cisco Networking Academy", date: "Jul 2026" },
+  {
+    title: "CCNA: Switching, Routing, and Wireless Essentials",
+    issuer: "Cisco Networking Academy",
+    date: "Jul 2026",
+    url: "https://www.credly.com/badges/69bdb382-7dd7-48d8-881f-e5ab122d6d59",
+  },
   {
     title: "CyberOps Associate",
     issuer: "Cisco Networking Academy",
