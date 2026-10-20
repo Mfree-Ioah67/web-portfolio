@@ -24,6 +24,7 @@ export const nav: NavItem[] = [
   { id: "about", label: "About" },
   { id: "competitions", label: "Competitions" },
   { id: "labs", label: "Labs" },
+  { id: "projects", label: "Projects" },
 ];
 
 export const highlights = [
@@ -150,5 +151,44 @@ export const labs: Lab[] = [
     title: "Machines",
     period: "Jun – Aug 2026",
     points: ["HTB: DevHub, Enigma, Optimum.", "THM: Blue, Ice, Kenobi, Network Services 1–2."],
+  },
+];
+
+export interface Project {
+  title: string;
+  meta: string;
+  description: string;
+  tech: string[];
+  links: { label: string; url: string }[];
+}
+
+// The pentest target is a real company's site: keep its name off the public page.
+export const projects: Project[] = [
+  {
+    title: "Black-box Web Penetration Test",
+    meta: "Team leader (4 members) · Ethical Hacking course · Jan – Mar 2026",
+    description:
+      "Black-box assessment of a live e-commerce website following the OWASP Top 10. Reported 5 findings, including DOM-based XSS and PII disclosure (High).",
+    tech: ["Nmap", "Gobuster", "Burp Suite", "OWASP ZAP"],
+    links: [{ label: "Repository", url: "https://github.com/Mfree-Ioah67/ethical-hacking-hod402" }],
+  },
+  {
+    title: "Web Security Labs",
+    meta: "Web security course (IAW301)",
+    description:
+      "PortSwigger Web Security Academy labs on SQL injection, XSS, IDOR, OAuth 2.0 and OS command injection, plus a machine-learning XSS detector served through a Flask API.",
+    tech: ["Burp Suite", "Python", "scikit-learn", "Flask"],
+    links: [{ label: "Repository", url: "https://github.com/Mfree-Ioah67/web-security-portswigger" }],
+  },
+  {
+    title: "Blood Donation Support System on AWS",
+    meta: "AWS First Cloud Journey · Sep – Dec 2025",
+    description:
+      "3-tier web application deployed on S3/CloudFront, EC2, RDS and Cognito, with CI/CD through GitLab, AWS CodePipeline and CodeBuild.",
+    tech: ["AWS", "GitLab CI/CD", "CodePipeline"],
+    links: [
+      { label: "Report site", url: "https://mfree-ioah67.github.io/learning--aws--fcj2025/" },
+      { label: "Repository", url: "https://github.com/Mfree-Ioah67/learning--aws--fcj2025" },
+    ],
   },
 ];

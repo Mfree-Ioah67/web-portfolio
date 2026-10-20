@@ -4,6 +4,7 @@ import Hero from "@/sections/Hero";
 import About from "@/sections/About";
 import Competitions from "@/sections/Competitions";
 import Labs from "@/sections/Labs";
+import Projects from "@/sections/Projects";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <About />
         <Competitions />
         <Labs />
+        <Projects />
       </main>
       <Footer />
     </>
