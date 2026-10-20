@@ -10,6 +10,10 @@ export default function About() {
         ))}
       </div>
       <dl className="facts">
+        <div style={{ display: "contents" }}>
+          <dt className="now">Now</dt>
+          <dd>{about.now}</dd>
+        </div>
         {about.facts.map((f) => (
           <div key={f.label} style={{ display: "contents" }}>
             <dt>{f.label}</dt>

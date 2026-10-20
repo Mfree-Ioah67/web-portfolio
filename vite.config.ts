@@ -4,6 +4,10 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  define: {
+    // Shown in the footer as "Updated YYYY-MM-DD"; Vercel builds on every push.
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+  },
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
   },

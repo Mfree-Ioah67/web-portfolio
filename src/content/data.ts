@@ -12,6 +12,7 @@ export const site = {
   email: "phamhoanghainguyen12a12dt@gmail.com",
   github: "https://github.com/Mfree-Ioah67",
   linkedin: "https://www.linkedin.com/in/ph%E1%BA%A1m-ho%C3%A0ng-h%E1%BA%A3i-nguy%C3%AAn-5bba9532a",
+  source: "https://github.com/Mfree-Ioah67/web-portfolio",
 };
 
 export const nav = [
@@ -35,6 +36,8 @@ export const about = {
     "I'm a final-year Information Assurance student at FPT University in Ho Chi Minh City (expected graduation May 2027).",
     "Most of what I know comes from hands-on work rather than coursework: Hack The Box and TryHackMe labs, a full Pro Lab, CTF competitions and a black-box assessment of a live website. I write a report for every lab I finish.",
   ],
+  // Keep this line current; a stale "now" is worse than none.
+  now: "Pointer Overflow CTF 2026 is still running (34 solved so far). NSUCRYPTO 2026 results are due 26 Nov. Applying for Red Team internships for 2027.",
   facts: [
     {
       label: "Education",
