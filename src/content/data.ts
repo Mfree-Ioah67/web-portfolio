@@ -114,7 +114,12 @@ export const competitions: Competition[] = [
     detail: "Team FPT DarkHotel",
     year: "2026",
   },
-  { name: "The Catch (CESNET)", result: "17th / 208", detail: "Individual", year: "2026" },
+  {
+    name: "The Catch (CESNET)",
+    result: "17th / 208",
+    detail: "Individual · full score, all 20 challenges solved; placed by solve time",
+    year: "2026",
+  },
   { name: "FLARE-On 13", result: "Finisher", detail: "All 9 reverse-engineering challenges solved", year: "2026" },
   { name: "UIT Net Challenges", result: "Encouragement Award", detail: "", year: "2026" },
   { name: "Pointer Overflow CTF", result: "34 solved", detail: "Solo", year: "2026" },
