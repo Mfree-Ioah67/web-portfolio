@@ -39,7 +39,7 @@ export const pages: Page[] = [
     id: "certifications",
     path: "/certifications",
     title: "Certifications",
-    teaser: "Hack The Box Pro Lab Dante and four Cisco credentials, each with a verification link.",
+    teaser: "Hack The Box Pro Lab Dante, a web-app pentest certification and four Cisco credentials, each with a verification link.",
   },
   { id: "contact", path: "/contact", title: "Contact", teaser: "Email, GitHub, LinkedIn." },
 ];
@@ -214,6 +214,14 @@ export const certifications: Certification[] = [
     url: "https://www.hackthebox.com/certificates",
     id: "HTBCERT-E8663A3FDE",
     file: "/htb-prolab-dante-certificate.pdf",
+  },
+  {
+    title: "Certified Junior WebApp Penetration Tester (JWPT)",
+    issuer: "HackersDaddy",
+    date: "Oct 2026",
+    url: "https://verify.hackersdaddy.com/cert/jwpt.3b028280f3784102859c7156eef31949.pham-hoang-hai-nguye-5577",
+    id: "VULN-2026-00079",
+    file: "/jwpt-certificate.pdf",
   },
   {
     title: "Ethical Hacker",
